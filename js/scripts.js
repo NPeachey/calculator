@@ -15,19 +15,38 @@ return inputNumber1 / inputNumber2;
 };
 
 $(document).ready(function() {
-  $("#cal").submit(function() {
+  $("#add").click(function() {
   var inputNumber1 = parseFloat($("#number1").val());
   var inputNumber2 = parseFloat($("#number2").val());
 
-$(".addresult").append(add(inputNumber1, inputNumber2));
-$(".subtractresult").append(subtract(inputNumber1, inputNumber2));
+  $(".addresult").append(add(inputNumber1, inputNumber2));
 
-event.preventDefault();
+});
 
-  // alert(add(inputAdd1, inputAdd2));
-  // alert(subtract(inputAdd1, inputAdd2));
-  // alert(multiply(inputAdd1, inputAdd2));
-  // alert(divide(inputAdd1, inputAdd2));
+  $("#subtract").click(function() {
+  var inputNumber1 = parseFloat($("#number1").val());
+  var inputNumber2 = parseFloat($("#number2").val());
+
+  $(".subtractresult").append(subtract(inputNumber1, inputNumber2));
+
+});
+
+  $("#multiply").click(function() {
+  var inputNumber1 = parseFloat($("#number1").val());
+  var inputNumber2 = parseFloat($("#number2").val());
+
+  $(".multiplyresult").append(multiply(inputNumber1, inputNumber2));
+
+});
+
+$("#divide").click(function() {
+var inputNumber1 = parseFloat($("#number1").val());
+var inputNumber2 = parseFloat($("#number2").val());
+
+$(".divideresult").append(divide(inputNumber1, inputNumber2));
+
+  event.preventDefault();
+
   });
 });
 
